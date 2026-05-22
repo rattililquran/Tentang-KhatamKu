@@ -282,6 +282,183 @@
       max-width: 600px;
     }
 
+    /* SURVEY DATA */
+    .survey-section {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .survey-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 50% 80% at 100% 50%, rgba(245,158,11,0.04) 0%, transparent 60%);
+    }
+
+    .survey-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: center;
+      position: relative;
+    }
+
+    .survey-left {
+      padding-right: 72px;
+      border-right: 1px solid var(--border);
+    }
+
+    .survey-right {
+      padding-left: 72px;
+    }
+
+    .survey-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--sky);
+      background: rgba(14,165,233,0.07);
+      border: 1px solid rgba(14,165,233,0.15);
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .survey-headline {
+      font-size: clamp(22px, 3vw, 34px);
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      margin-bottom: 20px;
+    }
+
+    .survey-desc {
+      font-size: 15px;
+      color: var(--ink-light);
+      line-height: 1.8;
+      max-width: 380px;
+    }
+
+    .survey-closing {
+      display: inline-block;
+      margin-top: 24px;
+      font-size: 13px;
+      font-style: italic;
+      font-family: 'Amiri', serif;
+      color: var(--ink-light);
+      opacity: 0.7;
+    }
+
+    /* Big number cards */
+    .survey-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .scard {
+      border-radius: 20px;
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .scard:hover {
+      transform: translateX(4px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    }
+
+    .scard-ramadhan {
+      background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+      border-color: rgba(16,185,129,0.2);
+    }
+
+    .scard-after {
+      background: linear-gradient(135deg, #fff7ed, #ffedd5);
+      border-color: rgba(245,158,11,0.25);
+    }
+
+    .scard-num {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -2px;
+      min-width: 110px;
+      text-align: center;
+    }
+
+    .scard-ramadhan .scard-num { color: #059669; }
+    .scard-after .scard-num { color: #d97706; }
+
+    .scard-body {}
+
+    .scard-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .scard-sub {
+      font-size: 12px;
+      color: var(--ink-light);
+      line-height: 1.6;
+    }
+
+    .scard-icon {
+      position: absolute;
+      right: 20px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 28px;
+      opacity: 0.18;
+    }
+
+    /* drop arrow between cards */
+    .scard-connector {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #d97706;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 2px 0;
+    }
+
+    .scard-connector::before,
+    .scard-connector::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(217,119,6,0.3));
+    }
+
+    .scard-connector::after {
+      background: linear-gradient(270deg, transparent, rgba(217,119,6,0.3));
+    }
+
+    @media (max-width: 768px) {
+      .survey-inner { grid-template-columns: 1fr; }
+      .survey-left { padding-right: 0; border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 48px; margin-bottom: 48px; }
+      .survey-right { padding-left: 0; }
+    }
+
     /* INTRO SPLIT */
     .intro-split {
       display: grid;
@@ -638,6 +815,95 @@
     .platform-name { font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
     .platform-desc { font-size: 13px; color: var(--ink-light); line-height: 1.65; }
 
+    /* INSPIRATIONAL QUOTE */
+    .inspire-section {
+      background: linear-gradient(160deg, #060f1e 0%, #0b2240 50%, #071a30 100%);
+      padding: 112px 24px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .inspire-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(14,165,233,0.09) 0%, transparent 70%);
+    }
+
+    .inspire-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .inspire-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(14,165,233,0.6);
+      margin-bottom: 44px;
+    }
+
+    .inspire-eyebrow span {
+      display: block;
+      width: 32px; height: 1px;
+      background: rgba(14,165,233,0.35);
+    }
+
+    .inspire-headline {
+      font-size: clamp(30px, 5vw, 52px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      margin-bottom: 0;
+    }
+
+    .inspire-headline .sky { color: #38bdf8; }
+    .inspire-headline .gold { color: #fbbf24; }
+
+    .inspire-rule {
+      width: 36px; height: 1px;
+      background: rgba(255,255,255,0.12);
+      margin: 36px auto;
+    }
+
+    .inspire-sub {
+      font-size: clamp(15px, 1.8vw, 17px);
+      color: rgba(255,255,255,0.42);
+      line-height: 1.9;
+      font-weight: 400;
+      margin-bottom: 52px;
+    }
+
+    .inspire-closing {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.4);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .inspire-closing-dot {
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: rgba(14,165,233,0.5);
+    }
+
+    .inspire-closing strong {
+      font-family: 'Amiri', serif;
+      font-size: 19px;
+      color: #7dd3fc;
+      font-weight: 400;
+    }
+
     /* CTA */
     .cta-section {
       background: linear-gradient(155deg, #060d1a 0%, #0a1f38 50%, #071e34 100%);
@@ -800,9 +1066,7 @@
     <strong>Rattilil Qur'an</strong> — catat, pantau, dan jaga konsistensi tilawahmu setiap hari.
   </p>
 
-  <a href="https://rattililquran.github.io/KhatamKu/" class="hero-cta" target="_blank" rel="noopener">
-    📖 Buka Aplikasi <span class="hero-cta-arrow">→</span>
-  </a>
+ 
 
   <div class="hero-scroll">
     <span>Scroll</span>
@@ -829,6 +1093,44 @@
     <div class="stat-label">Semangat Tak Terbatas</div>
   </div>
 </div>
+
+<!-- SURVEY DATA -->
+<section class="survey-section">
+  <div class="survey-inner">
+    <div class="survey-left reveal">
+      <span class="survey-eyebrow">Temuan Survei</span>
+      <h2 class="survey-headline">Ramadhan berlalu,<br>konsistensi pun ikut pergi.</h2>
+      <p class="survey-desc">
+        Data dari survei kami menunjukkan pola yang memprihatinkan — semangat tilawah saat Ramadhan tinggi, namun setelah 60 hari berlalu, sebagian besar kembali tertinggal.
+      </p>
+      <span class="survey-closing">Allahulmusta'aan.</span>
+    </div>
+
+    <div class="survey-right reveal">
+      <div class="survey-cards">
+        <div class="scard scard-ramadhan">
+          <div class="scard-num">75%</div>
+          <div class="scard-body">
+            <div class="scard-label">Saat Ramadhan</div>
+            <div class="scard-sub">responden berhasil khatam<br>setidaknya 1 kali</div>
+          </div>
+          <div class="scard-icon">🌙</div>
+        </div>
+
+        <div class="scard-connector">↓ 60 hari setelah Ramadhan</div>
+
+        <div class="scard scard-after">
+          <div class="scard-num">25%</div>
+          <div class="scard-body">
+            <div class="scard-label">Setelah Ramadhan</div>
+            <div class="scard-sub">yang masih konsisten khatam —<br>3 dari 4 orang berhenti</div>
+          </div>
+          <div class="scard-icon">📉</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- INTRO SPLIT -->
 <div class="intro-split">
@@ -1001,12 +1303,28 @@
   </div>
 </section>
 
-<!-- QUOTE -->
-<section class="quote-section">
-  <div style="max-width:1020px; margin:0 auto">
-    <div class="quote-decorline reveal"></div>
-    <p class="quote-title reveal">""Khatamku hanyalah wasilah, tujuan utama kita adalah mencari ridha-Nya. Semoga Allah mudahkan dan Allah terima setiap huruf yang dibaca"."</p>
-    <p class="quote-source reveal">Baarakallahu fiikum</p>
+<!-- INSPIRATIONAL QUOTE -->
+<section class="inspire-section">
+  <div class="inspire-inner reveal">
+    <div class="inspire-eyebrow">
+      <span></span>
+      Pesan dari Kami
+      <span></span>
+    </div>
+    <h2 class="inspire-headline">
+      KhatamKu hanyalah <span class="sky">wasilah</span>,<br>
+      tujuan utama kita adalah<br>
+      mencari <span class="gold">ridha-Nya</span>.
+    </h2>
+    <div class="inspire-rule"></div>
+    <p class="inspire-sub">
+      Semoga Allah mudahkan, dan Allah terima setiap huruf yang dibaca.
+    </p>
+    <div class="inspire-closing">
+      <div class="inspire-closing-dot"></div>
+      <strong>Baarakallahu fiikum</strong>
+      <div class="inspire-closing-dot"></div>
+    </div>
   </div>
 </section>
 
@@ -1017,7 +1335,7 @@
 
   <h2 class="cta-title reveal">Mulai Perjalananmu<br><em>Hari Ini</em></h2>
   <p class="cta-desc reveal">
-    Al-Quran adalah teman terbaik — dan KhatamKu hadir sebagai ikhtiar untuk tidak ada hari yang terlewat tanpa bersamanya. Biidznillah.
+    Al-Quran adalah teman terbaik — dan KhatamKu hadir untuk menjadi wasilah agar tidak ada hari yang terlewat tanpa bersamanya. biidznillah
   </p>
   <a href="https://rattililquran.github.io/KhatamKu/" class="cta-btn reveal" target="_blank" rel="noopener">
     📖 Buka KhatamKu Sekarang
